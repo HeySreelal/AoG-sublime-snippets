@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+conv.ask(new Suggestions("${1:One}", "${2:Two}"$3));
+$4
+]]></content>
+	<description>Suggestion chips - Actions On Google - rich response.</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>suggestion</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

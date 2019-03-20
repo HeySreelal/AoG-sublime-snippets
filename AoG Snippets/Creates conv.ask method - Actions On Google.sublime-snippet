@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+conv.ask("${1:Hey, what's going on?}");
+]]></content>
+	<description>Shortcut for creating conv.ask() method.</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ask</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	 <scope>source.js</scope>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+// see the documentation in https://developers.google.com/actions/assistant/responses#media_responses
+
+if (!conv.surface.capabilities.has('actions.capability.MEDIA_RESPONSE_AUDIO')) {
+  conv.ask('Sorry, this device does not support audio playback.');
+  return;
+}
+
+conv.ask('${1:Here we go, this is a media response example.}');
+conv.ask(new MediaObject({
+  name: '${2:Jazz in Paris}',
+  url: '${3:https://storage.googleapis.com/automotive-media/Jazz_In_Paris.mp3'},
+  description: '${4:A funky Jazz tune}',
+  icon: new Image({
+    url: '${5:https://storage.googleapis.com/automotive-media/album_art.jpg}',
+    alt: '${6:Album cover of an ccean view}',
+  }),
+}));
+$7
+]]></content>
+  <description>Creates media response - Actions On Google</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>media</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

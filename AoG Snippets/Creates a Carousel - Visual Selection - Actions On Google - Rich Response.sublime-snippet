@@ -1,0 +1,79 @@
+<snippet>
+	<content><![CDATA[
+// See the documentation in https://developers.google.com/actions/assistant/responses#carousel
+
+if (!conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')) {
+  conv.ask('Sorry, try this on a screen device.');
+  return;
+}
+
+conv.ask('${1:This is a carousel example.}');
+// Create a carousel
+conv.ask(new Carousel({
+  items: {
+    // Add the first item to the carousel
+    '${2:SELECTION_KEY_ONE}': {
+      synonyms: [
+        '${3:synonym 1}',
+        '${4:synonym 1}',
+      ],
+      title: '${5:Title of First Carousel Item}',
+      description: '${6:This is a description of a carousel item.}',
+      image: new Image({
+        url: '${7:IMG_URL_AOG.com}',
+        alt: '${8:Image alternate text}',
+      }),
+    },
+    // Add the second item to the carousel
+    '${9:SELECTION_KEY_GOOGLE_HOME}': {
+      synonyms: [
+        '${10:Google Home Assistant}',
+        '${11:Assistant on the Google Home}',
+    ],
+      title: '${12:Google Home}',
+      description: '${13:Google Home is a voice-activated speaker powered by the Google Assistant.}',
+      image: new Image({
+        url: '${14:IMG_URL_GOOGLE_HOME.com}',
+        alt: '${15:Google Home}',
+      }),
+    },
+    // Add third item to the carousel
+    '${16:SELECTION_KEY_GOOGLE_PIXEL}': {
+      synonyms: [
+        '${17:Google Pixel XL}',
+        '${18:Pixel}',
+        '${19:Pixel XL}',
+      ],
+      title: '${20:Google Pixel}',
+      description: '${21:Pixel. Phone by Google.}',
+      image: new Image({
+        url: '${22:IMG_URL_GOOGLE_PIXEL.com}',
+        alt: '${23:Google Pixel}',
+      }),
+    },
+  },
+}));
+
+// Handling selected Item
+
+const SELECTED_ITEM_RESPONSES = {
+  '${2:SELECTION_KEY_ONE}': '${24:You selected the first item}',
+  '${9:SELECTION_KEY_GOOGLE_HOME}': '${25:You selected the Google Home!}',
+  '${16:SELECTION_KEY_GOOGLE_PIXEL}': '${26:You selected the Google Pixel!}',
+};
+
+app.intent('actions.intent.OPTION', (conv, params, option) => {
+  let response = '${27:You did not select any item}';
+  if (option && SELECTED_ITEM_RESPONSES.hasOwnProperty(option)) {
+    response = SELECTED_ITEM_RESPONSES[option];
+  }
+  conv.ask(response);
+});
+$28
+]]></content>
+  <description>Creates a Carousel - Visual selection - Actions On Google - Rich Response</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>carousel</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

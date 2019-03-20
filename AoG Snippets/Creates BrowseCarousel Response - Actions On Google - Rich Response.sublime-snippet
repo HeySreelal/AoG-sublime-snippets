@@ -1,0 +1,43 @@
+<snippet>
+	<content><![CDATA[
+// See the documentation in https://developers.google.com/actions/assistant/responses#browsing_carousel
+
+if (!conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT')) {
+  conv.ask('Sorry, try this on a screen device.');
+  return;
+}
+
+conv.ask('${1:Here is an example for browse carousel.}');
+// Create a browse carousel
+conv.ask(new BrowseCarousel({
+  items: [
+    new BrowseCarouselItem({
+      title: '${2:Title of item 1}',
+      url: '${3:google.com}',
+      description: '${4:Description of item 1}',
+      image: new Image({
+        url: '${5:IMG_URL.com}',
+        alt: '${6:Image alternate text}',
+      }),
+      footer: '${7:Item 1 footer}',
+    }),
+    new BrowseCarouselItem({
+      title: '${8:Google Assistant}',
+      url: '${9:google.com}',
+      description: '${10:Google Assistant on Android and iOS}',
+      image: new Image({
+        url: '${11:IMG_URL_Assistant.com}',
+        alt: '${12:Image alternate text}',
+      }),
+      footer: '${13:More information about the Google Assistant}',
+    }),
+  ],
+}));
+$14
+]]></content>
+  <description>Creates a BrowseCarousel Reponse - Actions On Google - Rich Response.</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>BrowseCarousel</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

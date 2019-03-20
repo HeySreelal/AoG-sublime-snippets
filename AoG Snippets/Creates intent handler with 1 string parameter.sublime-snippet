@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+app.intent('${1:intent_name}', (conv, {${2:param}}) => {
+    $3
+});
+$4
+]]></content>
+	<description>Creates an intent with one string parameter - Actions On Google.</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>intent1</tabTrigger> 
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

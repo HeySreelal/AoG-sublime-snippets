@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+conv.ask(new SimpleResponse({
+	text: "${1:Here we go...}",
+	speech: "${1:Here we go...}"
+}));
+conv.ask(new BasicCard({
+    title: ${3:title},
+    subtitle: ${4:subtitle},
+    text: ${5:text},
+    image: new Image({
+        url: "${6:https://example.com/path/myImg.png}",
+        alt: ${7:alt},
+    }),
+}));
+$8
+]]></content>
+	<description>Creates a BasicCard with Image - Actions On Google - BasicCard rich response.</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>card</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

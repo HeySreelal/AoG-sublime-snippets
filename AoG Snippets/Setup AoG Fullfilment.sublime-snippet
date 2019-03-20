@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+'use strict';
+// Import the Dialogflow module from the Actions on Google client library.
+const {dialogflow} = require('actions-on-google');
+// Import the firebase-functions package for deployment.
+const functions = require('firebase-functions');
+// Instantiate the Dialogflow client.
+const app = dialogflow({debug: true});
+// Set the DialogflowApp object to handle the HTTPS POST request.
+exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
+
+app.intent("Default Welcome Intent", (conv) => {
+    conv.ask(`Welcome!`);
+});
+
+app.intent('${1:intent_name}', (conv) => {
+    ${2://code...}
+});
+$3
+]]></content>
+	<description>Setup the AoG Fullfillment</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>aog</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

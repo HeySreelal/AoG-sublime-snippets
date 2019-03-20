@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+app.intent("${1:intent_name}", (conv) => {
+    const options = {
+        context: "${2:To find a place}",
+        prompt: "${3:What place should I use?}"
+    };
+    conv.ask(new Place(options));
+});
+$4
+]]></content>
+	<description>Creates helper for getting place - Actions On Google</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hplace</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+app.intent("${1:intent_name}", (conv) => {
+    conv.ask(new Confirmation("${2:Is that okay?}"))
+});
+app.intent("$1_confirmation", (conv, params, confirmationGranted) => {
+    return conv.ask(confirmationGranted ? "Yes" : "No");
+});
+$3
+]]></content>
+	<description>Creates a helper for getting confirmation - Actions On Google.</description>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hconfirm</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
