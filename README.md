@@ -9,7 +9,7 @@ Thanks for reaching out to my package!
 
 I'm happy to introduce you the Actions On Google package to you. Please follow these instructions to install my snippets, so that you can code a way more than easier.
 
-Installation:
+# Installation:
 There is two way of installing these packages:
 
 1: Clone this repository into your Sublime Text Packages Directory.
@@ -22,7 +22,7 @@ That's it!
 
 Now you can enjoy these features for making your coding easier.
 
-| Snippet Key | Description |
+# | Snippet Key | Description |
 |------------|-----------|
 |aog | Creates required AoG scaffold for Firebase Cloud Functions.|
 |ask | Creates conv.ask() method.|
@@ -39,12 +39,18 @@ Now you can enjoy these features for making your coding easier.
 |storage | Shortcut for getting conv.user.storage object.|
 |suggestion | Creates suggestion chips.|
 
-Thanks
+# Thanks
 Thanks for using these snippets!
 
 By the way, are you using VSCode? Then you have a nice snippet package from @Denis Valášek.
 
-See his tweet, blog, and repository: Tweet: https://twitter.com/DenisValasek/status/1101172409963610112 Blog post: https://medium.com/@denis.v/actions-on-google-vs-code-extension-bc8ca0342b13 Repository: https://github.com/DenisVCode/Actions-on-Google-Snippets-VS-Code
+See his tweet, blog, and repository: 
+
+Tweet: https://twitter.com/DenisValasek/status/1101172409963610112 
+
+Blog post: https://medium.com/@denis.v/actions-on-google-vs-code-extension-bc8ca0342b13 
+
+Repository: https://github.com/DenisVCode/Actions-on-Google-Snippets-VS-Code
 
 I would like to thank Denis for the nice idea! :) You can find me on Twitter: https://twitter.com/_SreelalTS
 
