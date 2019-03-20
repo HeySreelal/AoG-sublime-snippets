@@ -22,7 +22,9 @@ That's it!
 
 Now you can enjoy these features for making your coding easier.
 
-# | Snippet Key | Description |
+# Available Snippet Keys and Description
+
+| Snippet Key | Description |
 |------------|-----------|
 |aog | Creates required AoG scaffold for Firebase Cloud Functions.|
 |ask | Creates conv.ask() method.|
