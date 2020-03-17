@@ -14,7 +14,7 @@ There is two way of installing these packages:
 
 1: Clone this repository into your Sublime Text Packages Directory.
 
-$ `git clone https://github.com/sreelusreelal/aog-sublime-text-snippets.git`
+$ `git clone https://github.com/HeySreelal/aog-sublime-text-snippets.git`
 
 2: Download the zip file of this repository and unzip it in your device. Copy the "AoG Snippets" folder into your Sublime Text Packages folder. You can open the Sublime Text Package directory by clicking on the "Browse Packages" option in the 'Preferences' menu in your Sublime Text. (Preferences > Browse Package).
 
